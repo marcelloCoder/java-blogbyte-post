@@ -8,8 +8,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Spring Boot Application</h1>
+    <h1>Blog Byte</h1>
+    <h2>Home Page</h2>
     <hr/>
+    <ul>
+        <li><a th:href="@{/posts/new}">New Post</a></li>
+    </ul>
     <div class="post-container">
         <div class="post" th:each="post : ${posts}">
             <h2><a th:href="@{'/posts/' + ${post.id}}"
